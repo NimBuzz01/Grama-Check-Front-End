@@ -44,16 +44,33 @@ hr {
 }
 
 /* grids */
-#index-wrapper,
+#index-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: fit-content;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    align-items: start;
+    grid-auto-rows: min-content;
+}
+
 #user-portal-wrapper,
-#officer-portal-wrapper,
+#officer-portal-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: fit-content;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    align-items: start;
+    grid-auto-rows: min-content;
+}
+
 #request-form-wrapper,
 #user-status-wrapper,
 #pending-request-wrapper,
 #more-info-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /*grid-template-rows: repeat(5, 1fr);*/
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: fit-content;
     grid-column-gap: 20px;
     grid-row-gap: 10px;
@@ -392,11 +409,17 @@ hr {
 #user-sign-in {
     padding-left: 3.9em;
     padding-right: 3.9em;
+    max-width: 100%;
 }
 
 #check-btn {
     padding-left: 5em;
     padding-right: 5em;
+    max-width: 100%;
+}
+
+.portal-header {
+    text-align: start;
 }
 
 @media screen and (max-width: 768px) {
@@ -429,11 +452,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .grama-logo h3 {
-        text-align: end;
-    }
-}
+@media screen and (max-width: 400px) {}
 
 /* Log Out Changes
 
