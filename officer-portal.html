@@ -16,7 +16,7 @@
                 <h3 class="grama-name">Grama Check</h3>
             </div>
             <div id="officer-portal-logo" class="portal-logo">
-                <a href="index.html" class="logout-btn"><img src="img/user.png" alt="user" width="25%" height="auto">
+                <a onclick="auth.signOut()" class="logout-btn"><img src="img/user.png" alt="user" width="25%" height="auto">
                     LOG OUT</a>
             </div>
             <div id="officer-portal-body" class="portal-body">
@@ -30,5 +30,15 @@
         </div>
     </div>
 </body>
+<script>
+adminAuth.initialize({
+    signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
+        signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
+        clientID: "RMhFnIyA4u21SQrYA1mGaGNUAo8a",
+        baseUrl: "https://api.asgardeo.io/t/sample404",
+        scope: [ "openid","profile" ]
+  });
+  adminAuth.signIn({callOnlyOnRedirect:true})
+</script>
 
 </html>
