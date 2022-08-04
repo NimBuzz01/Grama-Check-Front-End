@@ -17,7 +17,7 @@
                 <h1>Grama Check</h1>
             </div>
             <div id="index-body">
-                <a href="user-portal.html" id="user-sign-in" class="main-btn">Sign in as User</a>
+                <a onclick="userAuth.signIn()" id="user-sign-in" class="main-btn">Sign in as User</a>
                 <a href="officer-portal.html" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
             </div>
             <div id="index-body-alt">
@@ -33,5 +33,21 @@
     </div>
 </body>
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
+<script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
+<script>
+  // This client is a class and can be instantiated as follows.
+  var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
+  // const auth = new AsgardeoAuthClient(store);
+
+  // Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
+  userAuth.initialize({
+    signInRedirectURL: "https://abdulhakkam.github.io/JS-Sample/user-portal.html",
+        signOutRedirectURL: "https://abdulhakkam.github.io/JS-Sample/index.html",
+        clientID: "5ynhFBWAfqYznFHVf0J5mYAxexAa",
+        baseUrl: "https://api.asgardeo.io/t/sample404",
+        scope: [ "openid","profile" ]
+  });
+  userAuth.signIn({callOnlyOnRedirect:true})
+</script>
 
 </html>
