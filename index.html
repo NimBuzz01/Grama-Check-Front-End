@@ -17,8 +17,8 @@
                 <h1>Grama Check</h1>
             </div>
             <div id="index-body">
-                <a onclick="userAuth.signIn()" id="user-sign-in" class="main-btn">Sign in as User</a>
-                <a onclick="adminAuth.signIn()" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
+                <a onclick="userAuthSignIn()" id="user-sign-in" class="main-btn">Sign in as User</a>
+                <a onclick="adminSignIn()" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
             </div>
             <div id="index-body-alt">
                 <p>Log Out?</p>
@@ -35,8 +35,8 @@
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script>
-  // This client is a class and can be instantiated as follows.
-  var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
+function userSignin() {
+var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 
 
   // Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
@@ -47,9 +47,13 @@
         baseUrl: "https://api.asgardeo.io/t/sample404",
         scope: [ "openid","profile" ]
   });
+  userAuth.signIn();
+    
+  }
+  
   //userAuth.signIn({callOnlyOnRedirect:true})
-
-  var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
+function adminSignIn() {
+var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   adminAuth.initialize({
     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
         signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
@@ -57,6 +61,9 @@
         baseUrl: "https://api.asgardeo.io/t/sample404",
         scope: [ "openid","profile" ]
   });
+adminAuth.signIn();
+}
+ 
   //adminAuth.signIn({callOnlyOnRedirect:true})
 
 
