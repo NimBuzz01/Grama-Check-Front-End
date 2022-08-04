@@ -17,8 +17,8 @@
                 <h1>Grama Check</h1>
             </div>
             <div id="index-body">
-                <a onclick="userSignIn()" id="user-sign-in" class="main-btn">Sign in as User</a>
-                <a onclick="adminSignIn()" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
+                <a onclick="userAuth.signIn()" id="user-sign-in" class="main-btn">Sign in as User</a>
+                <a onclick="adminAuth.signIn()" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
             </div>
             <div id="index-body-alt">
                 <p>Log Out?</p>
@@ -35,7 +35,7 @@
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script>
-function userSignIn() {
+
 var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 
 
@@ -49,10 +49,10 @@ var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   });
   userAuth.signIn();
     
-  }
+
   
-  //userAuth.signIn({callOnlyOnRedirect:true})
-function adminSignIn() {
+userAuth.signIn({callOnlyOnRedirect:true})
+
 var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   adminAuth.initialize({
     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
@@ -62,9 +62,9 @@ var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
         scope: [ "openid","profile" ]
   });
 adminAuth.signIn();
-}
+
  
-  //adminAuth.signIn({callOnlyOnRedirect:true})
+adminAuth.signIn({callOnlyOnRedirect:true})
 
 
 </script>
