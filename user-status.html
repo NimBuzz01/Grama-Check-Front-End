@@ -13,7 +13,7 @@
     <div class="container">
         <div id="user-status-wrapper" class="wrapper">
             <div class="back-btn">
-                <a href="user-portal.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="15%"
+                <a href="user-portal.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="30%"
                         height="auto"></a>
             </div>
             <div class="grama-logo">
@@ -25,27 +25,25 @@
                 <p>
                     <label>Enter Your NIC: </label>
                     <br>
-                    <input type="text" name="nic" class="form-input" id="formInput" />
+                    <input type="text" name="nic" class="form-input" />
                 </p>
                 <p>
-                    <button  class="submit-btn"  onclick="statusCheck()">Check Status</button>
+                    <button type="submit" class="submit-btn">Check Status</button>
                 </p>
-                <p class="validation" id="validation">Invalid NIC!</p>
+                <p class="validation">Invalid NIC!</p>
                 <h3>Status</h3>
                 <hr>
                 <p class="status-text">NIC:</p>
-                <p class="status-variable" id="identityField">N/A</p>
+                <p class="status-variable">20011931234</p>
                 <p class="status-text">Grama Certificate:</p>
-                <p class="status-variable" id="statusField">N/A</p>
+                <p class="status-variable">Pending...</p>
             </div>
             <div class="status-footer">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="help-btn"><img src="img/help.png"
-                        alt="help" width="20%" height="auto"></a>
+                <a href="help-page.html" class="help-btn"><img src="img/help.png"
+                        alt="help" width="16%" height="auto"></a>
             </div>
         </div>
     </div>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="user-status.js"></script>
 </html>

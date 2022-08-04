@@ -13,7 +13,7 @@
     <div class="container">
         <div id="request-form-wrapper" class="wrapper">
             <div class="back-btn">
-                <a href="user-portal.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="15%"
+                <a href="user-portal.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="30%"
                         height="auto"></a>
             </div>
             <div class="grama-logo">
@@ -24,23 +24,20 @@
                 <p>
                     <label>NIC: </label>
                     <br>
-                    <input type="text" name="nic" class="form-input" id="nicInput"/>
+                    <input type="text" name="nic" class="form-input" />
                 </p>
                 <p>
                     <label>Address: </label>
                     <br>
-                    <textarea rows="5" name="address" class="form-input" id="addressInput"></textarea>
+                    <textarea rows="5" name="address" class="form-input"></textarea>
                 </p>
-                <p class="validation" id="notValid">Invalid NIC or Address !</p>
-                <p class="validation" id="valid">Request successful</p>
+                <p class="validation">Invalid NIC!</p>
                 <p>
-                    <button class="submit-btn" onclick="requestCert()">Submit</button>
+                    <button class="submit-btn">Submit</button>
                 </p>
             </div>
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="request-form.js"></script>
 
 </html>

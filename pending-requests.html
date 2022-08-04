@@ -13,40 +13,43 @@
     <div class="container">
         <div id="pending-request-wrapper" class="wrapper">
             <div class="back-btn">
-                <a href="officer-portal.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="15%"
+                <a href="officer-portal.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="30%"
                         height="auto"></a>
             </div>
             <div class="grama-logo">
                 <h3 class="grama-name">Grama Check</h3>
             </div>
             
-            
-            
             <!-- Use this Div In Your JS -->
             <div class="pending-requests">
                 <p>
                     <label>Enter Grama ID: </label>
                     <br>
-                    <input type="text" name="gid" class="form-input" id="formInput"/>
+                    <input type="text" name="gid" class="form-input" />
                 </p>
                 <p>
-                    <button class="submit-btn" onclick="getRequests()">Get Requests</button>
+                    <button type="submit" class="submit-btn">Get Requests</button>
                 </p>
-                <p class="validation" id="validation">No requests for entered ID</p>
-                <h3 id="requestHeader">Pending Requests</h3>
-                <div id="pendingRequests">
-
+                <p class="validation">Invalid NIC!</p>
+                <h3>Pending Requests</h3>
+                <div class="pending-card">
+                    <p>NIC: <span>20011231231</span></p>
+                    <p>Address: <span>29/21, San Francisco, India</span></p>
+                    <a href="more-info.html" class="info-btn">More Info</a>
+                </div>
+                <div class="pending-card">
+                    <p>NIC: <span>20011231231</span></p>
+                    <p>Address: <span>29/21, San Francisco, India</span></p>
+                    <a href="more-info.html" class="info-btn">More Info</a>
+                </div>
+                <div class="pending-card">
+                    <p>NIC: <span>20011231231</span></p>
+                    <p>Address: <span>29/21, San Francisco, India</span></p>
+                    <a href="more-info.html" class="info-btn">More Info</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="pending-requests.js"></script>
 
 </html>
-<!--               <div class="pending-card">
-                    <p>NIC: <span>20011231231</span></p>
-                    <p>Address: <span>29/21, San Francisco, India</span></p>
-                    <a href="more-info.html" class="info-btn">More Info</a>
-                </div>--> 
