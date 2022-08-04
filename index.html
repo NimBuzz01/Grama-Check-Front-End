@@ -46,10 +46,11 @@ var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
         baseUrl: "https://api.asgardeo.io/t/sample404",
         scope: [ "openid","profile" ]
   });
-  userAuth.signIn();
-    
 
-  
+ 
+userAuth.signIn({callOnlyOnRedirect:true})    
+
+ userAuth.signIn 
 
 var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   adminAuth.initialize({
@@ -59,7 +60,6 @@ var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
         baseUrl: "https://api.asgardeo.io/t/sample404",
         scope: [ "openid","profile" ]
   });
-adminAuth.signIn();
 
  
 adminAuth.signIn({callOnlyOnRedirect:true})
