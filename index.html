@@ -32,7 +32,7 @@
         </div>
     </div>
 </body>
-<script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
+
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script>
 
@@ -48,17 +48,17 @@ var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   });
 
  
-userAuth.signIn({callOnlyOnRedirect:true})    
 
 
-var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
-  adminAuth.initialize({
-    signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
-        signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
-        clientID: "RMhFnIyA4u21SQrYA1mGaGNUAo8a",
-        baseUrl: "https://api.asgardeo.io/t/sample404",
-        scope: [ "openid","profile" ]
-  });
+
+// var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
+//   adminAuth.initialize({
+//     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
+//         signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
+//         clientID: "RMhFnIyA4u21SQrYA1mGaGNUAo8a",
+//         baseUrl: "https://api.asgardeo.io/t/sample404",
+//         scope: [ "openid","profile" ]
+//   });
 
  
 
