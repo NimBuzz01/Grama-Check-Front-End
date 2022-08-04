@@ -48,6 +48,7 @@
         scope: [ "openid","profile" ]
   });
   userAuth.signIn({callOnlyOnRedirect:true})
+  var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   adminAuth.initialize({
     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
         signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
