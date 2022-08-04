@@ -13,7 +13,7 @@
     <div class="container">
         <div id="more-info-wrapper" class="wrapper">
             <div class="back-btn">
-                <a href="pending-requests.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="30%"
+                <a href="pending-requests.html" class="back-btn-btn"><img src="img/back.png" alt="back" width="15%"
                         height="auto"></a>
             </div>
             <div class="grama-logo">
@@ -24,33 +24,37 @@
             <div class="user-status">
                 <h3>Status</h3>
                 <hr>
-                <div class="info">
-                    <p class="info-nic">NIC: <span>883120990v</span></p>
-                    <p class="info-nic">Grama ID: <span>101</span></p>
-                    <p class="info-nic">Certificate Number: <span>CERT101</span></p>
-                    <p class="info-nic">Status: <span>Police Check Complete</span></p>
-                    <p class="info-nic">Date: <span>2022-5-5</span></p>
-                    <p class="info-nic">Full Name: <span>George Michael Clooney</span></p>
-                    <p class="info-nic">Division: <span>101</span></p>
-                    <p class="info-nic">Sec Division: <span>101</span></p>
-                    <p class="info-nic">Full Address: <span>63/492, San Francisco, Germany</span></p>
+                <div class="info" id="info">
+                    <p class="info-nic">ID Number: <span id="idNo"></span></p>
+                    <p class="info-nic">Grama ID: <span id="gramaId"></span></p>
+                    <p class="info-nic">Status: <span id="status"></span></p>
+                    <p class="info-nic">Date: <span id="date"></span></p>
+                    <p class="info-nic">Full Name: <span id="name"></span></p>
+                    <p class="info-nic">Division: <span  id="division"></span></p>
+                    <p class="info-nic">Sec Division: <span id="secDivision"></span></p>
+                    <p class="info-nic">Full Address: <span id="address"></span></p>
                     <hr>
-                    <p class="info-nic">Police Data: </p>
-                    <p class="info-nic">Case Number: <span>CS103</span></p>
-                    <p class="info-nic">Severity: <span>High</span></p>
-                    <p class="info-nic">Case Date: <span>2022-5-5</span></p>
-                    <p class="info-nic">Reporting Officer: <span>0F105</span></p>
-                    <p class="info-nic">Summary: <span>Criminal Possession of a Firearm.</span></p>
+                    <h3>Police Data </h3>
+              
+                    <p class="info-nic">Case Number: <span id="caseNo"></span></p>
+                    <p class="info-nic">Severity: <span id="severity"></span></p>
+                    <p class="info-nic">Case Date: <span id="caseDate"></span></p>
+                    <p class="info-nic">Reporting Officer: <span id="officer"></span></p>
+                    <p class="info-nic">Summary: <span id="summary"></span></p>
                     <hr>
-                    <p class="info-nic">User Phone Number: <span>0763410892</span></p>
+                    <p class="info-nic">User Phone Number: <span id="telephone"></span></p>
+                   
                 </div>
             </div>
 
             <div class="more-info-footer">
-                <a href="#" id="done-btn" class="info-btn">Mark as Done</a>
+                <a id="done-btn" class="info-btn" onclick="changeStatus()">Mark as Done</a>
+               
             </div>
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="more-info.js"></script>
 
 </html>
