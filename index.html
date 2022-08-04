@@ -17,8 +17,8 @@
                 <h1>Grama Check</h1>
             </div>
             <div id="index-body">
-                <a onclick="userAuth.signIn()" id="user-sign-in" class="main-btn">Sign in as User</a>
-                <a onclick="adminAuth.signIn()" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
+                <a href="userSignIn.html" id="user-sign-in" class="main-btn">Sign in as User</a>
+                <a href="adminSignIn.html" id="officer-sign-in" class="main-btn">Sign in as Grama Officer</a>
             </div>
             <div id="index-body-alt">
                 <p>Log Out?</p>
@@ -48,20 +48,20 @@ var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   });
 
  
+userAuth.signIn({callOnlyOnRedirect:true})    
 
 
-
-// var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
-//   adminAuth.initialize({
-//     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
-//         signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
-//         clientID: "RMhFnIyA4u21SQrYA1mGaGNUAo8a",
-//         baseUrl: "https://api.asgardeo.io/t/sample404",
-//         scope: [ "openid","profile" ]
-//   });
+var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
+  adminAuth.initialize({
+    signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
+        signOutRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/index.html",
+        clientID: "RMhFnIyA4u21SQrYA1mGaGNUAo8a",
+        baseUrl: "https://api.asgardeo.io/t/sample404",
+        scope: [ "openid","profile" ]
+  });
 
  
-
+adminAuth.signIn({callOnlyOnRedirect:true})
 
 
 </script>
