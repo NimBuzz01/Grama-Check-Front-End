@@ -30,8 +30,10 @@
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script>
     //authenticate admin
+
 var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 adminAuth.initialize({
     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/officer-portal.html",
