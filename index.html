@@ -38,7 +38,6 @@
 
 var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 
-
   // Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
   userAuth.initialize({
     signInRedirectURL: "https://nimbuzz01.github.io/Grama-Check-Front-End/user-portal.html",
@@ -51,7 +50,6 @@ var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
     
 
   
-userAuth.signIn({callOnlyOnRedirect:true})
 
 var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   adminAuth.initialize({
