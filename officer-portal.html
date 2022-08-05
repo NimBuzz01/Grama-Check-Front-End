@@ -44,7 +44,9 @@ adminAuth.initialize({
   });
   adminAuth.signIn({callOnlyOnRedirect:true})
   console.table(adminAuth);
-  console.log(adminAuth.getAccessToken())
+  adminAuth.getAccessToken().then(Response=>{
+    console.log(response)
+  });
 </script>
 
 </html>
