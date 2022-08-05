@@ -49,7 +49,7 @@
 
   var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   userAuth.getAccessToken().then(Response=>{
-            localStorage.setItem("token",Response);
+            sessionStorage.setItem("token",Response);
 
     });
   // const auth = new AsgardeoAuthClient(store);

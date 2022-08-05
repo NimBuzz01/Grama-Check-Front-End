@@ -1,5 +1,5 @@
 function statusCheck(){
-    token =localStorage.getItem("token");
+    token =sessionStorage.getItem("token");
     var id = document.getElementById("formInput").value;
     console.log(id);
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/statusCheckApi',{
