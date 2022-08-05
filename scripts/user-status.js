@@ -1,6 +1,12 @@
 function statusCheck(){
     token =sessionStorage.getItem("token");
     console.log(token);
+    const config = {
+        Headers:{
+            'Authorization': `Bearer ${token}`
+        }
+    }
+    console.log(config);
     var id = document.getElementById("formInput").value;
     console.log(id);
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/statusCheckApi',{
