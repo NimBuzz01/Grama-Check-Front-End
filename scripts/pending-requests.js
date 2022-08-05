@@ -7,7 +7,7 @@ function getRequests() {
             grama_id:idNumber
             }, {
                 headers: {
-                    'Authorization': 'Bearer '+token
+                    Authorization: 'Bearer '+token
                 }
 }).then(response =>{
     const arr = response.data;
