@@ -30,6 +30,7 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 <script>
     //authenticate admin
@@ -45,8 +46,27 @@ adminAuth.initialize({
   adminAuth.signIn({callOnlyOnRedirect:true})
   console.table(adminAuth);
   adminAuth.getAccessToken().then(Response=>{
-    console.log(Response)
+    var config = {
+    method: 'get',
+    url: 'https://api.asgardeo.io/t/sample404/oauth2/userinfo',
+    headers: {
+        'Authorization': 'Bearer {f2175eed-8d06-3bca-8966-8ffc64cb7359}'
+    }
+};
+
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
+
   });
+
+
 </script>
+
 
 </html>
