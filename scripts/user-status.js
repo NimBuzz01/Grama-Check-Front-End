@@ -13,7 +13,7 @@ function statusCheck(){
         id_number:id
     },{
         headers:{
-            Authorization: `Bearer ${token}`
+            'Authorization': `Bearer ${token}`
         }
     }).then(response =>{
         if(response=="invalid"){
