@@ -2,7 +2,7 @@ function statusCheck(){
     token =localStorage.getItem("token");
     var id = document.getElementById("formInput").value;
     console.log(id);
-    axios.post('https://statuscheck-dot-choreo-asgardeo-intern-project.de.r.appspot.com/',{
+    axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/statusCheckApi',{
         id_number:id
     },{
         Headers:{
