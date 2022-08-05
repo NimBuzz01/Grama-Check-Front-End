@@ -44,8 +44,8 @@ adminAuth.initialize({
         scope: [ "openid","profile" ]
   });
   adminAuth.signIn({callOnlyOnRedirect:true})
-  console.table(adminAuth);
   adminAuth.getAccessToken().then(Response=>{
+    console.log(Response);
     var config = {
     method: 'get',
     url: 'https://api.asgardeo.io/t/sample404/oauth2/userinfo',
