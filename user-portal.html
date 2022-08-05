@@ -45,7 +45,14 @@
         baseUrl: "https://api.asgardeo.io/t/sample404",
         scope: [ "openid","profile" ]
   });
-  userAuth.signIn({callOnlyOnRedirect:true})
+  userAuth.signIn({callOnlyOnRedirect:true}).then(Response=>{
+    userAuth.getAccessToken().then(Response=>{
+            console.log(Response);
+            sessionStorage.setItem("token",Response);
+
+    });
+
+  })
 
   var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
   userAuth.getAccessToken().then(Response=>{
