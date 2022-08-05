@@ -45,20 +45,7 @@ var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
     });
         adminAuth.signIn({callOnlyOnRedirect:true}).then(()=>{
             adminAuth.getAccessToken().then(Response=>{
-            
-            var config = {
-            method: 'get',
-            url: 'https://api.asgardeo.io/t/sample404/oauth2/userinfo',
-            headers: {
-                'Authorization': 'Bearer {'+Response+'}'
-            }
-        
-        };
-    localStorage.setItem("token",Response);
-
-
-
-
+            localStorage.setItem("token",Response);
 
     });
 })
