@@ -1,9 +1,13 @@
 function statusCheck(){
-    console.log("yes");
+    token =localStorage.getItem("token");
     var id = document.getElementById("formInput").value;
     console.log(id);
     axios.post('https://statuscheck-dot-choreo-asgardeo-intern-project.de.r.appspot.com/',{
         id_number:id
+    },{
+        Headers:{
+            'Authorization': 'Bearer '+token
+        }
     }).then(response =>{
         if(response=="invalid"){
             document.getElementById('validation').style.display='block'

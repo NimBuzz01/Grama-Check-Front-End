@@ -48,6 +48,10 @@
   userAuth.signIn({callOnlyOnRedirect:true})
 
   var userAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
+  userAuth.getAccessToken().then(Response=>{
+            localStorage.setItem("token",Response);
+
+    });
   // const auth = new AsgardeoAuthClient(store);
 
   // Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
