@@ -48,7 +48,7 @@ adminAuth.initialize({
   adminAuth.getAccessToken().then(Response=>{
     var config = {
     method: 'get',
-    url: 'https://api.asgardeo.io/t/{organization}/oauth2/userinfo',
+    url: 'https://api.asgardeo.io/t/sample404/oauth2/userinfo',
     headers: {
         'Authorization': 'Bearer ${'+Response+'}'
     }
