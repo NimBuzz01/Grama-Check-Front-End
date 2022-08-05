@@ -1,12 +1,13 @@
 function getRequests() {
     const token = localStorage.getItem("token");
+    console.log(token);
     document.getElementById("pendingRequests").innerHTML="";
     const idNumber = document.getElementById("formInput").value;
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/certificateCheckApi',{
             grama_id:idNumber
             }, {
                 headers: {
-                    Authorization: token
+                    'Authorization': token
                 }
 }).then(response =>{
     const arr = response.data;
