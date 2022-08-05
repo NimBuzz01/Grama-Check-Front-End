@@ -50,7 +50,7 @@ var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
     });
 })
 adminAuth.getAccessToken().then(Response=>{
-            localStorage.setItem("token",Response);
+            console.log(Response)
 
     });
   

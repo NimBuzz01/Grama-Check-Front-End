@@ -1,5 +1,5 @@
 function getRequests() {
-    const token = localStorage.getItem("token");
+    
     console.log(token);
     document.getElementById("pendingRequests").innerHTML="";
     const idNumber = document.getElementById("formInput").value;
