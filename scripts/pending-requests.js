@@ -1,8 +1,13 @@
 function getRequests() {
+    const token = localStorage.getItem("token")
     document.getElementById("pendingRequests").innerHTML="";
     const idNumber = document.getElementById("formInput").value;
-    axios.post('https://certificatecheck-dot-choreo-asgardeo-intern-project.de.r.appspot.com/',{
+    axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/certificateCheckApi',{
             grama_id:idNumber,
+},{
+    headers: {
+        'Authorization': token
+    }
 }).then(response =>{
     const arr = response.data;
     console.log(arr);
@@ -36,10 +41,6 @@ function getRequests() {
         button.className ='info-btn';
         button.innerHTML ='More Info';
         
-
-
-        
-
         div.appendChild(idTag);
         div.appendChild(addressTag);
         div.appendChild(button);

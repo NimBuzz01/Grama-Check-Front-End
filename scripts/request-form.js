@@ -2,7 +2,7 @@ function requestCert() {
     console.log("yes");
     document.getElementById("notValid").style.display='none';
     document.getElementById("valid").style.display='none';
-    axios.post('https://idcheck-dot-choreo-asgardeo-intern-project.de.r.appspot.com/',{
+    axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/idCheckApi',{
         id_number:document.getElementById("nicInput").value,
         address:document.getElementById("addressInput").value
 
