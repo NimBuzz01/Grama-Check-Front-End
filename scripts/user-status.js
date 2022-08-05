@@ -2,7 +2,7 @@ function statusCheck(){
     token =sessionStorage.getItem("token");
     console.log(token);
     const config = {
-        Headers:{
+        headers:{
             'Authorization': `Bearer ${token}`
         }
     }
@@ -12,7 +12,7 @@ function statusCheck(){
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/statusCheckApi',{
         id_number:id
     },{
-        Headers:{
+        headers:{
             Authorization: `Bearer ${token}`
         }
     }).then(response =>{
