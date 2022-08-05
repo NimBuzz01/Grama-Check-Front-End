@@ -44,17 +44,11 @@ adminAuth.initialize({
         scope: [ "openid","profile" ]
   });
   adminAuth.signIn({callOnlyOnRedirect:true})
-  console.table(adminAuth);
-  adminAuth.getAccessToken().then(Response=>{
-    var config = {
-    method: 'get',
-    url: 'https://api.asgardeo.io/t/sample404/oauth2/userinfo',
-    headers: {
-        'Authorization': 'Bearer {f2175eed-8d06-3bca-8966-8ffc64cb7359}'
-    }
-};
 
-   console.log(adminAuth.getAccessToken());
+  adminAuth.getAccessToken().then(Response=>{
+    console.log(Response);
+
+
 
     });
 
