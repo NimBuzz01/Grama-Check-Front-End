@@ -3,10 +3,14 @@ if (localStorage.getItem("moreInfoID") === null) {
     console.log("local storage empty")
   }else{
     const idNumber = localStorage.getItem("moreInfoID");
-   
+    const token = localStorage.getItem("token");
     axios.post("https://getcertificatedetails-dot-choreo-asgardeo-intern-project.de.r.appspot.com/",{
     id_number:idNumber
-    }).then(response=>{
+    },{
+      headers:{
+          'Authorization': `Bearer ${token}`
+      }
+  }).then(response=>{
        var info=response.data;
         console.log(info);
         
@@ -66,9 +70,13 @@ if (localStorage.getItem("moreInfoID") === null) {
 
 function changeStatus() {
   const idNumber = localStorage.getItem("moreInfoID");
-    axios.post('https://changestatus-dot-choreo-asgardeo-intern-project.de.r.appspot.com/',{
+    axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/changeStatus',{
       id_number:idNumber
-    }).then(response=>{
+    },{
+      headers:{
+          'Authorization': `Bearer ${token}`
+      }
+  }).then(response=>{
       
       document.getElementById("status").innerHTML=response.data.status;
     }).catch(error=>{

@@ -1,3 +1,12 @@
+if(localStorage.getItem("pendingRequests")===null){
+    console.log("empty");
+}else{
+    arr = JSON.parse(localStorage.getItem("pendingRequests"));
+    createRequests(arr);
+    
+}
+
+
 function getRequests() {
     const token = localStorage.getItem("token");
     console.log(token);
@@ -11,7 +20,19 @@ function getRequests() {
                 }
             }).then(response =>{
     const arr = response.data;
-    console.log(arr);
+    
+    localStorage.setItem("pendingRequests",JSON.stringify(arr));
+    createRequests(arr);
+    
+}).catch(error=>{
+    console.log("error");
+    document.getElementById('validation').style.display='block'
+})
+    
+}
+
+
+function createRequests(arr){
     for(i=0;i<arr.length;i++){
         
         var div =document.createElement("div");
@@ -51,10 +72,6 @@ function getRequests() {
         document.getElementById("pendingRequests").appendChild(div);
 
     }
-}).catch(error=>{
-    console.log("error");
-    document.getElementById('validation').style.display='block'
-})
-    
 }
+
 
