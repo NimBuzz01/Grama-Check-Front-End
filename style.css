@@ -57,7 +57,7 @@ hr {
 #user-portal-wrapper,
 #officer-portal-wrapper {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: fit-content;
     grid-column-gap: 20px;
     grid-row-gap: 10px;
@@ -70,7 +70,7 @@ hr {
 #pending-request-wrapper,
 #more-info-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: fit-content;
     grid-column-gap: 20px;
     grid-row-gap: 10px;
@@ -452,12 +452,12 @@ hr {
     }
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
 
     .logout-btn {
         font-size: smaller;
     }
-}
+} */
 
 /* Log Out Changes
 
