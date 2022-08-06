@@ -5,11 +5,11 @@ function getRequests() {
     const idNumber = document.getElementById("formInput").value;
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/certificateCheckApi',{
             grama_id:idNumber
-            }, {
-                headers: {
-                    'Authorization': 'Bearer '+token
+            },{
+                headers:{
+                    'Authorization': `Bearer ${token}`
                 }
-}).then(response =>{
+            }).then(response =>{
     const arr = response.data;
     console.log(arr);
     for(i=0;i<arr.length;i++){
