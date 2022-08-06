@@ -79,6 +79,7 @@ function changeStatus() {
   }).then(response=>{
       
       document.getElementById("status").innerHTML=response.data.status;
+      window.location.href='pending-requests.html';
     }).catch(error=>{
       console.log(error);
     })
