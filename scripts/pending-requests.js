@@ -52,6 +52,7 @@ function getRequests() {
 
     }
 }).catch(error=>{
+    console.log("error");
     document.getElementById('validation').style.display='block'
 })
     
