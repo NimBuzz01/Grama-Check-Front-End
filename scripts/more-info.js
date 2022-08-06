@@ -6,7 +6,7 @@ if (localStorage.getItem("moreInfoID") === null) {
     const idNumber = localStorage.getItem("moreInfoID");
     const token = localStorage.getItem("token");
     console.log(token);
-    axios.post("https://getcertificatedetails-dot-choreo-asgardeo-intern-project.de.r.appspot.com/",{
+    axios.post("https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/getCertificateApi",{
     id_number:idNumber
     },{
       headers:{
