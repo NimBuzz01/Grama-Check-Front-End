@@ -73,7 +73,7 @@ if (localStorage.getItem("moreInfoID") === null) {
 function changeStatus() {
   const token = localStorage.getItem('token');
   const idNumber = localStorage.getItem("moreInfoID");
-    axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/changeStatus',{
+    axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/changeStatusApi',{
       id_number:idNumber
     },{
       headers:{
