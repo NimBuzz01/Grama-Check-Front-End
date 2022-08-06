@@ -1,12 +1,5 @@
 function statusCheck(){
     token =sessionStorage.getItem("token");
-    console.log(token);
-    const config = {
-        headers:{
-            'Authorization': `Bearer ${token}`
-        }
-    }
-    console.log(config);
     var id = document.getElementById("formInput").value;
     console.log(id);
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/statusCheckApi',{
@@ -24,6 +17,7 @@ function statusCheck(){
             document.getElementById('identityField').innerHTML = id;
         }
     }).catch(error=>{
+        console.log(error);
         document.getElementById('validation').style.display='block'
         document.getElementById('statusField').innerHTML = "N/A";
             document.getElementById('identityField').innerHTML = "N/A";
