@@ -66,6 +66,10 @@ if (localStorage.getItem("moreInfoID") === null) {
 
 
 
+}).catch(error=>{
+  if(error.data.message=="Access token validation failed"){
+    alert("Sign in again and try")
+  }
 })
 }
 
@@ -85,6 +89,9 @@ function changeStatus() {
       window.location.href='pending-requests.html';
     }).catch(error=>{
       console.log(error);
+      if(error.data.message=="Access token validation failed"){
+        alert("Sign in again and try")
+      }
     })
   }  
 
