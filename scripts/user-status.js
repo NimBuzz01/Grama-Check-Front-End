@@ -20,7 +20,10 @@ function statusCheck(){
         console.log(error);
         
         document.getElementById('statusField').innerHTML = "N/A";
-            document.getElementById('identityField').innerHTML = "N/A";
+        document.getElementById('identityField').innerHTML = "N/A";
+        if(error.data.message=="Access token validation failed"){
+            alert("Sign in again");
+        }
     })
 
 }
