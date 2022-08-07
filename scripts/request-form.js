@@ -21,6 +21,10 @@ function requestCert() {
             id_number:idNumber,
             grama_id:response.data.grama_id
 
+        },{
+            headers:{
+                'Authorization': `Bearer ${token}`
+            }
         }).then(response=>{
             console.log("police report api");
             console.log(response);  
