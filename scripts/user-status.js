@@ -9,8 +9,8 @@ function statusCheck(){
             'Authorization': `Bearer ${token}`
         }
     }).then(response =>{
-        console.log(response);
-        if(response.data.message===null){
+        
+        if(response.data.message==="No records exist for this NIC number!"){
             swal("No pending requests for entered ID","","error")
         }else{
            
