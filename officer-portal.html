@@ -16,7 +16,7 @@
                 <img src="img/logo.jpg" alt="help" width="30%" height="auto">
             </div>
             <div id="officer-portal-logo" class="portal-logo">
-                <a onclick="adminAuth.signOut()" class="logout-btn"><img src="img/user.png" alt="user" width="20%" height="auto">
+                <a onclick="logOut()" class="logout-btn"><img src="img/user.png" alt="user" width="20%" height="auto">
                     LOG OUT</a>
             </div>
             <div id="officer-portal-body" class="portal-body">
@@ -54,10 +54,21 @@ adminAuth.getAccessToken().then(Response=>{
             sessionStorage.setItem("token",Response);
 
     });
+function logOut() {
+    adminAuth.signOut().then(response=>{
+        if(response.message="The user must be authenticated first."){
+            alert("Session expired, Sign in again");
+            window.location.href="index.html";
+
+        }
+    })
+    
+}
   
 
 
 </script>
+
 
 
 </html>
