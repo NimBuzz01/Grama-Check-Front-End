@@ -13,14 +13,19 @@ function requestCert() {
             'Authorization': `Bearer ${token}`
         }
     }).then(response=>{
-        console.log(response);  
+        console.log("id check api");
+        console.log(response);
+        
         idNumber =document.getElementById("nicInput").value;
-        axios.post('https://policereport-dot-choreo-asgardeo-intern-project.de.r.appspot.com/',{
+        axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/policeCheckApi',{
             id_number:idNumber,
             grama_id:response.data.grama_id
 
         }).then(response=>{
-            console.log(response);         
+            console.log("police report api");
+            console.log(response);  
+            
+                     
         }).catch(error=>{
             console.log(error);
         })
