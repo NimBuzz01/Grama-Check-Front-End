@@ -10,7 +10,7 @@ function statusCheck(){
         }
     }).then(response =>{
         if(response.data.status===null){
-            swal("No pending requests for enetered ID","","error")
+            swal("No pending requests for entered ID","","error")
         }else{
            
             document.getElementById('statusField').innerHTML = response.data.status;
