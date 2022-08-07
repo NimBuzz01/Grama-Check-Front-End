@@ -44,10 +44,10 @@
 <script src="scripts/pending-requests.js"></script>
 <script>
     function closeRequests() {
-        if(localStorage.getItem("pendingRequests")===null){
+        if(sessionStorage.getItem("pendingRequests")===null){
             console.log("local storage empty");
         }else{
-            localStorage.removeItem("pendingRequests");
+            sessionStorage.removeItem("pendingRequests");
         }
         window.location.href='officer-portal.html'
         

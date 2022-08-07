@@ -45,13 +45,13 @@ var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
     });
 adminAuth.signIn({callOnlyOnRedirect:true}).then(()=>{
             adminAuth.getAccessToken().then(Response=>{
-            localStorage.setItem("token",Response);
+           sessionStorage.setItem("token",Response);
 
     });
 })
 var adminAuth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 adminAuth.getAccessToken().then(Response=>{
-            localStorage.setItem("token",Response);
+            sessionStorage.setItem("token",Response);
 
     });
   

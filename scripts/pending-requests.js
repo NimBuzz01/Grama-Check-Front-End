@@ -1,14 +1,14 @@
-if(localStorage.getItem("pendingRequests")===null){
+if(sessionStorage.getItem("pendingRequests")===null){
     console.log("empty");
 }else{
-    arr = JSON.parse(localStorage.getItem("pendingRequests"));
+    arr = JSON.parse(sessionStorage.getItem("pendingRequests"));
     createRequests(arr);
     
 }
 
 
 function getRequests() {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     console.log(token);
     document.getElementById("pendingRequests").innerHTML="";
     const idNumber = document.getElementById("formInput").value;
@@ -20,7 +20,7 @@ function getRequests() {
                 }
             }).then(response =>{
     const arr = response.data;    
-    localStorage.setItem("pendingRequests",JSON.stringify(arr));
+   sessionStorage.setItem("pendingRequests",JSON.stringify(arr));
     
 
     if(response.data.message=='No new records exist!'){

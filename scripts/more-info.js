@@ -3,8 +3,8 @@ if (localStorage.getItem("moreInfoID") === null) {
     console.log("local storage empty")
   }else{
 
-    const idNumber = localStorage.getItem("moreInfoID");
-    const token = localStorage.getItem("token");
+    const idNumber = sessionStorage.getItem("moreInfoID");
+    const token = sessionStorage.getItem("token");
     console.log(token);
     axios.post("https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/getCertificateApi",{
     id_number:idNumber
@@ -75,8 +75,8 @@ if (localStorage.getItem("moreInfoID") === null) {
 
 
 function changeStatus() {
-  const token = localStorage.getItem('token');
-  const idNumber = localStorage.getItem("moreInfoID");
+  const token = sessionStorage.getItem('token');
+  const idNumber = sessionStorage.getItem("moreInfoID");
     axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/changeStatusApi',{
       id_number:idNumber
     },{
