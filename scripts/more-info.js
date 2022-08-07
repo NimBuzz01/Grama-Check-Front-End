@@ -1,5 +1,5 @@
 
-if (localStorage.getItem("moreInfoID") === null) {
+if (sessionStorage.getItem("moreInfoID") === null) {
     console.log("local storage empty")
   }else{
 
