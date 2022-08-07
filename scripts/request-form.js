@@ -15,7 +15,12 @@ function requestCert() {
     }).then(response=>{
         console.log("id check api");
         console.log(response);
-        
+        if(response.data.message=="No records exist for this NIC number!"){
+            swal("NIC or Address invalid" , "" ,"error")
+
+        }
+
+
         idNumber =document.getElementById("nicInput").value;
         axios.post('https://apigateway-dot-choreo-asgardeo-intern-project.de.r.appspot.com/policeCheckApi',{
             id_number:idNumber,
