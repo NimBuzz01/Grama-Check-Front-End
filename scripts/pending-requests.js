@@ -60,7 +60,7 @@ function createRequests(arr){
         var button = document.createElement("a");
         button.id=arr[i].id_number;
         button.onclick=function() {
-            localStorage.setItem("moreInfoID",this.id);
+            sessionStorage.setItem("moreInfoID",this.id);
             window.location.href = "more-info.html"
             
             
