@@ -19,14 +19,19 @@ function getRequests() {
                     'Authorization': `Bearer ${token}`
                 }
             }).then(response =>{
-    const arr = response.data;
-    
+    const arr = response.data;    
     localStorage.setItem("pendingRequests",JSON.stringify(arr));
-    createRequests(arr);
+    
+
+    if(response.data.message=='No new records exist!'){
+        swal("Invalid Grama ID","","error")
+    }else{
+        createRequests(arr);
+    }
     
 }).catch(error=>{
     console.log("error");
-    document.getElementById('validation').style.display='block'
+    
 })
     
 }
