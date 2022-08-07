@@ -84,8 +84,17 @@ function changeStatus() {
           'Authorization': `Bearer ${token}`
       }
   }).then(response=>{
+
       
       document.getElementById("status").innerHTML=response.data.status;
+      arr = JSON.parse(sessionStorage.getItem("pendingRequests"))
+      for(let i= 0 ; i<arr.length;i++){
+        if(arr[i].id_number==idNumber){
+          arr.splice(i,1);
+        }
+      }
+      sessionStorage.setItem("pendingRequests",JSON.stringify(arr));
+
       window.location.href='pending-requests.html';
     }).catch(error=>{
       console.log(error);
