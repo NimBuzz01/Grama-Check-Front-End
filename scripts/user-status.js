@@ -12,6 +12,8 @@ function statusCheck(){
         
         if(response.data.message==="No records exist for this NIC number!"){
             swal("No pending requests for entered ID","","error")
+            document.getElementById('statusField').innerHTML = "N/A";
+        document.getElementById('identityField').innerHTML = "N/A";
         }else{
            
             document.getElementById('statusField').innerHTML = response.data.status;
