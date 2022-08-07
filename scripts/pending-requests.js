@@ -24,7 +24,7 @@ function getRequests() {
     
 
     if(response.data.message=='No new records exist!'){
-        swal("Invalid Grama ID","","error")
+        swal("No new records found","","error")
     }else{
         createRequests(arr);
     }
