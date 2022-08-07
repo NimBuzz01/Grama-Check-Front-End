@@ -20,8 +20,7 @@ function requestCert() {
             grama_id:response.data.grama_id
 
         }).then(response=>{
-            document.getElementById("valid").style.display='block';
-            console.log("works");            
+            console.log(response);         
         }).catch(error=>{
             console.log(error);
         })
