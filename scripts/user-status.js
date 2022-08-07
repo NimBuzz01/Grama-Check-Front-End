@@ -9,16 +9,16 @@ function statusCheck(){
             'Authorization': `Bearer ${token}`
         }
     }).then(response =>{
-        if(response=="invalid"){
-            document.getElementById('validation').style.display='block'
+        if(response.data.status===null){
+            swal("No pending requests for enetered ID","","error")
         }else{
-            document.getElementById('validation').style.display='none';
+           
             document.getElementById('statusField').innerHTML = response.data.status;
             document.getElementById('identityField').innerHTML = id;
         }
     }).catch(error=>{
         console.log(error);
-        document.getElementById('validation').style.display='block'
+        
         document.getElementById('statusField').innerHTML = "N/A";
             document.getElementById('identityField').innerHTML = "N/A";
     })
