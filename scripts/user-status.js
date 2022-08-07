@@ -9,7 +9,8 @@ function statusCheck(){
             'Authorization': `Bearer ${token}`
         }
     }).then(response =>{
-        if(response.data.status===null){
+        console.log(response);
+        if(response.data.message===null){
             swal("No pending requests for entered ID","","error")
         }else{
            
