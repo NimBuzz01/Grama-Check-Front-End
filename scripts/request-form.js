@@ -31,7 +31,7 @@ function requestCert() {
                 'Authorization': `Bearer ${token}`
             }
         }).then(response=>{
-            console.log("police report api");
+            swal("Request successful" , "" ,"success")
             console.log(response);  
             
                      
