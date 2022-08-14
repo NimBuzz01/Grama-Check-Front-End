@@ -49,7 +49,7 @@
     userAuth.getAccessToken().then(Response=>{
             console.log(Response);
             sessionStorage.setItem("token",Response);
-            auth.getDecodedIDToken().then((idToken) => {
+            userAuth.getDecodedIDToken().then((idToken) => {
            var decodedIdToken = idToken;
            // Get claims from the decoded idtoken
            console.log(decodedIdToken);
